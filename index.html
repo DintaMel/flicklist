@@ -7,7 +7,7 @@
   TODO 3b
   add meta viewport tag
   -->
-
+  <meta name=viewport content="width=device-width, initial-scale=1">
 
   <script src="https://code.jquery.com/jquery-2.2.3.js"></script>  
 
@@ -37,7 +37,7 @@
   </header>
 
 
-  <div class="main-content">
+  <div class="container-fluid main-content">
     <!--
     TODO 3a
     put the rest of the content (both sections) inside a div with class "row", 
@@ -49,21 +49,22 @@
     unless the user is on a tablet or mobile phone, in which case, each section should
     fill the entire width, with the watchlist first and the browse list below.
     -->
-
-    <section id="section-watchlist">
-      <header>
-        <h2>My Watchlist</h2>
-        <hr/>
-      </header>
-
+    <div class="row">
+      <section id="section-watchlist" class="col-md-5">
+        <header>
+          <h2>My Watchlist</h2>
+          <hr/>
+        </header>
+          <ul></ul>
+    </div>
       <!-- 
       TODO 2f
       Give this list a class of "list-inline"
       -->
-      <ul></ul>
+      <ul class="list-inline"></ul>
     </section>
 
-    <section id="section-browse">
+    <section id="section-browse" class= "col-md-7">
       <header>
         <h2>Browse Movies</h2>
 
@@ -73,10 +74,16 @@
         Use the following classes (google them and find some examples):
         "input-group", "form-control", "input-group-btn", "btn", "btn-primary"
         -->
-        <form id="form-search">
-          <input type="text" name="query"/>
-          <input type="submit" value="Search By Title"/>
-        </form>
+        
+          <form id="form-search">
+            <div class="input-group">
+              <input class="form-control" type="text" name="query"/>
+              <span class="input-group-btn">
+                <input class="btn btn-primary" type="submit" value="Search By Title"/>
+              </span>
+            </div>
+          </form>
+        
 
       </header>
 
@@ -87,7 +94,7 @@
       Use the following styles:
       "list-group", "list-group-item", "btn", "btn-primary", 
       -->
-      <ul></ul>
+      <ul class="list-group"></ul>
     </section>
 
   </div>
